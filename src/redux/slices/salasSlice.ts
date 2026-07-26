@@ -1,7 +1,13 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Asiento } from '@/app/types/asiento';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Asiento } from "@/types/asiento";
+
+interface Sala {
+  id: string;
+  nombre: string;
+}
 
 interface SalasState {
+  items: Sala[];
   asientos: Asiento[];
 }
 
@@ -25,6 +31,10 @@ const generarAsientosIniciales = (): Asiento[] => {
 };
 
 const initialState: SalasState = {
+  items: [
+    { id: "S1", nombre: "Sala 1" },
+    { id: "S2", nombre: "Sala 2" },
+  ],
   asientos: generarAsientosIniciales(),
 };
 

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Reserva } from '@/app/types/reserva';
+import { Reserva } from '@/types/reserva';
 
 interface ReservasState {
   historial: Reserva[];
